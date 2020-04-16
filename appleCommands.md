@@ -23,3 +23,9 @@ find <dir> -iname <filename pattern> | xargs grep "<text pattern>"
 
 ### reset access permission for Microphone, Camera, etc ###
 tccutil reset Microphone
+
+### show selected xcode Developer folder ###
+xcode-select -p
+
+### change to other xcode Developer folder ###
+sudo xcode-select -s <path to Xcode.app/Contents/Developer>
