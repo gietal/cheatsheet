@@ -1,0 +1,25 @@
+### check app's code signature ###
+codesign -dvvv <path to .app>
+
+Authority=<certificate type/name>
+flags=0x10000(runtime) # hardened runtime
+
+### check if app is notarized ###
+spctl -a -v <path to .app>
+
+source= <will say Notarized, if notarized>
+
+### stop gatekeeper from marking the app as corrupted, clear a file's attributes ###
+xattr -cr <path to .app or file>
+
+### check exe architecture ###
+lipo -info <path to unix exe>
+
+### find file matching multiple patterns ###
+find <dir> \( -iname "*.h" -o -iname "*.cpp" \)
+
+### find file containing text ###
+find <dir> -iname <filename pattern> | xargs grep "<text pattern>"
+
+### reset access permission for Microphone, Camera, etc ###
+tccutil reset Microphone
