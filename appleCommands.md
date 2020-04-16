@@ -5,7 +5,7 @@ Authority=<certificate type/name>
 flags=0x10000(runtime) # hardened runtime
 
 ### check if app is notarized ###
-spctl -a -v <path to .app>
+spctl -a -vvv <path to .app>
 
 source= <will say Notarized, if notarized>
 
