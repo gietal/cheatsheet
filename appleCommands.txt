@@ -29,3 +29,6 @@ xcode-select -p
 
 ### change to other xcode Developer folder ###
 sudo xcode-select -s <path to Xcode.app/Contents/Developer>
+
+### start a local http file server ###
+python -m SimpleHTTPServer <port>
