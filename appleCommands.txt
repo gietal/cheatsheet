@@ -9,6 +9,10 @@ spctl -a -vvv <path to .app>
 
 source= <will say Notarized, if notarized>
 
+
+### check if pkg is notarized ###
+spctl -a -vvv -t install <path to .pkg>
+
 ### stop gatekeeper from marking the app as corrupted, clear a file's attributes ###
 xattr -cr <path to .app or file>
 
