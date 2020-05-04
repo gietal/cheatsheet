@@ -1,0 +1,10 @@
+### remotely connect to other machine ###
+winrs -r:<machine name> -u:<username> -p:<password>
+
+### map network drive to local drive ###
+net use <local drive name or * to automatically assign> <remote drive path> /user:<username> <password>
+
+net use g: \\otherserver\share /user:me mypassword
+
+### reboot now ###
+shutdown -r -t 0
