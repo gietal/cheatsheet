@@ -36,3 +36,12 @@ sudo xcode-select -s <path to Xcode.app/Contents/Developer>
 
 ### start a local http file server ###
 python -m SimpleHTTPServer <port>
+
+### accept xcode license ###
+sudo xcrun -license accept
+
+### symbolicate crash report manually ###
+put dsym and .app on the directory you're running this
+xcrun atos -o <path to exe> <first binary image load address on the crash report> <address to symbolicate>
+e.g:
+xcrun atos -o ./MyApp/Contents/MacOS/MyApp 0x10fa6d000 0x000000010fd1de43
