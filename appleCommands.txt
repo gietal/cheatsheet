@@ -42,6 +42,6 @@ sudo xcrun -license accept
 
 ### symbolicate crash report manually ###
 put dsym and .app on the directory you're running this
-xcrun atos -o <path to exe> <first binary image load address on the crash report> <address to symbolicate>
+xcrun atos -o <path to exe> -l <first binary image load address of the app on the crash report> <address to symbolicate>
 e.g:
-xcrun atos -o ./MyApp/Contents/MacOS/MyApp 0x10fa6d000 0x000000010fd1de43
+xcrun atos -o ./MyApp/Contents/MacOS/MyApp -l 0x10fa6d000 0x000000010fd1de43
