@@ -1,0 +1,10 @@
+# list all commits by me
+git log --author=Gieta <commit id>..HEAD --pretty=oneline
+
+# delete untracked everything (use -n for dry run)
+git clean -f
+
+git bisect --start
+
+# create and checkout new branch
+git checkout -b <new branch name>
