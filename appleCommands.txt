@@ -25,8 +25,12 @@ find <dir> \( -iname "*.h" -o -iname "*.cpp" \)
 ### find file containing text ###
 find <dir> -iname <filename pattern> | xargs grep "<text pattern>"
 
-### reset access permission for Microphone, Camera, etc ###
-tccutil reset Microphone
+### reset access permission for Microphone, Camera, special folders ###
+tccutil reset Microphone <bundle ID>
+tccutil reset Camera <bundle ID>
+tccutil reset SystemPolicyDesktopFolder <bundle ID>
+tccutil reset SystemPolicyDownloadsFolder <bundle ID>
+tccutil reset SystemPolicyDocumentsFolder <bundle ID>
 
 ### show selected xcode Developer folder ###
 xcode-select -p
