@@ -1,0 +1,7 @@
+# read a double out of a xmm register: 
+(lldb) register read xmm0 --format float64
+Short form: 
+(lldb) re r xmm0 -f float64
+
+# read active registers:
+(lldb) register read
