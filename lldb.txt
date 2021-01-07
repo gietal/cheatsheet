@@ -5,3 +5,7 @@ Short form:
 
 # read active registers:
 (lldb) register read
+
+# add expression to read register as double
+(double&)$xmm1
+
