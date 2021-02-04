@@ -49,3 +49,19 @@ put dsym and .app on the directory you're running this
 xcrun atos -o <path to exe> -l <first binary image load address of the app on the crash report> <address to symbolicate>
 e.g:
 xcrun atos -o ./MyApp/Contents/MacOS/MyApp -l 0x10fa6d000 0x000000010fd1de43
+
+
+### brew install specific version ###
+put the formula.rb you want under Formula/ here https://github.com/gietal/homebrew-tap
+
+add this line to the formula.rb file inside 'bottle do':
+bottle do
+    root_url "https://homebrew.bintray.com/bottles" # add this
+    ...
+end
+
+push the changes
+
+brew tap gietal/tap
+brew install gietal/tap/<formula name>
+brew untap
