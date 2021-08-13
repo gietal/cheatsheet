@@ -1,2 +1,3 @@
 https://cryptii.com/
 https://httpstat.us/
+http://davenport.sourceforge.net/ntlm.html#keyExchange
