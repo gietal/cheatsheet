@@ -9,6 +9,8 @@ spctl -a -vvv <path to .app>
 
 source= <will say Notarized, if notarized>
 
+### list the dylib loaded by an executable ###
+otool -l <path to exe> | grep name
 
 ### check if pkg is notarized ###
 spctl -a -vvv -t install <path to .pkg>
